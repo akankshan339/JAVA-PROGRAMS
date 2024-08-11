@@ -1,35 +1,26 @@
-/*1 2 3 4 5 5 4 3 2 1
-  1 2 3 4     4 3 2 1
-  1 2 3         3 2 1
-  1 2             2 1
-  1                 1
- */
-import java.io.*;
+/*
+1 2 3 4 5 
+ 2 3 4 5 
+  3 4 5 
+   4 5 
+    5 */
 public class pat6
 {
-    public static void main(String args[])throws IOException
+    public static void main(String args[])
     {
-        InputStreamReader read=new InputStreamReader(System.in);
-        BufferedReader in=new BufferedReader(read);
-    int i,j,n,k,l;
-    System.out.println("Enter the value of n :");
-    n=Integer.parseInt(in.readLine());
-    for(i=n;i>=1;i--)
-    {
-        for(l=1;l<=i;l++)
+        int i,j;
+        for(i=1;i<=5;i++)
         {
-            System.out.print(l+" ");
+            for(j=1;j<i;j++)
+            {
+                System.out.print(" ");
+            }
+            for(j=i;j<=5;j++)
+            {
+                System.out.print(j+" ");
+            }
+            System.out.println();
+            
         }
-        for(k=i;k<n;k++)
-        {
-            System.out.print("    "); //4 spaces
-        } 
-         for(j=i;j>=1;j--)
-        {
-            System.out.print(j+" ");
-        }
-        
-        System.out.println();
-}
-}
+    }
 }

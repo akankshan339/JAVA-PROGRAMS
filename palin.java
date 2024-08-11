@@ -1,40 +1,26 @@
-//print the palindrome word from the string
-//sample input : my mom and dad are coming in noon
-//sample output: mom  dad noon
-//sample output :no of palindromic words are :3
-//string tokenizer to break word
-import java.io.*;
+//reverse no btw m and n
+import java.util.*;
 public class palin
 {
-    public static void main(String args[])throws IOException
+    public static void main(String args[])
     {
-       InputStreamReader read=new InputStreamReader(System.in);
-        BufferedReader in=new BufferedReader(read);
-        String st,pal="",rev="";
-        char ch,chr;
-        int i,l,count=0;
-        System.out.println("Enter the string :");
-        st=in.readLine();
-        st=st+' ';
-        l=st.length();
-        for(i=0;i<l;i++)
+        Scanner in=new Scanner(System.in);
+        int m,n;
+        System.out.println("Enter the value of m,n");
+        m=in.nextInt();
+        n=in.nextInt();
+        for(int i=m;i<=n;i++)
         {
-            ch=st.charAt(i);
-            if(ch!=' ')
+            int no=i,rev=0;
+            while(no!=0)
             {
-                pal=pal+ch;
-                rev=ch+rev;
+                int d=no%10;
+                rev=rev*10+d;
+                no=no/10;
             }
-            else
-            {
-          if(rev.equals(pal))
-          {
-            count++;  
-          System.out.println("palindrome words in string are :"+pal);
-        }
-            pal="";
-            rev="";
+        if(rev==i)
+        System.out.println("Reverse no="+rev);
+        
     }
-        }
-         System.out.println("no of palindrome words in string are :"+count);
-        }}
+    }
+}

@@ -1,30 +1,23 @@
-/*
-5 4 3 2 1 
- 4 3 2 1 
-  3 2 1 
-   2 1 
-    1  */
-import java.io.*;
 public class pat3
 {
-    public static void main(String args[])throws IOException
+    public static void main(String args[])
     {
-        InputStreamReader read=new InputStreamReader(System.in);
-        BufferedReader in=new BufferedReader(read);
-    int i,j,n,k;
-    System.out.println("Enter the value of n :");
-    n=Integer.parseInt(in.readLine());
-    for(i=n;i>=1;i--)
-    {
-        for(k=i;k<n;k++)
+        for(int i=1;i<=3;i++)
         {
-            System.out.print(" ");
+            for(int j=1;j<=i;j++)
+            {
+                System.out.print(i+"");
+            }
+            System.out.println();
         }
-        for(j=i;j>=1;j--)
+        for(int i=2;i>=2;i++)
         {
-            System.out.print(j+" ");
+            for(int j=i;j<=2;j++)
+            {
+                System.out.print(i+"");
+            }
+            System.out.println();
         }
-        System.out.println();
+        
     }
-}
 }

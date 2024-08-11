@@ -1,29 +1,27 @@
-/*
-1 
-3 1 
-5 3 1 
-7 5 3 1 
-9 7 5 3 1   */
-import java.io.*;
+ /*
+     x 
+    x x 
+   x x x 
+  x x x x 
+ x x x x x 
+ */
+
 public class pat7
 {
-    public static void main(String args[])throws IOException
+    public static void main(String args[])
     {
-        InputStreamReader read=new InputStreamReader(System.in);
-        BufferedReader in=new BufferedReader(read);
-        int n,i,j;
-        System.out.println("enter the value of n");
-        n=Integer.parseInt(in.readLine());
-        for(i=1;i<=n;i=i+2)
+        int i,j;
+        for(i=1;i<=5;i++)
         {
-         for(j=i;j>=1;j=j-2)
-         {
-             System.out.print(j+" ");
-         }
-         System.out.println();
+            for(j=i;j<=5;j++)
+            {
+                System.out.print(" ");
+            }
+            for(j=1;j<=i;j++)
+            {
+            System.out.print("x"+" ");
         }
-        
-        
-        
+        System.out.println();
+    }
     }
 }
